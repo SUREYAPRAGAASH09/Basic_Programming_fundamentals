@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +8,12 @@ namespace Basic_Programming_fundamentals
 {
     internal class Solutions
     {
-        public static void swap_two_integers()
+        public static void swap_two_integers(int IntegerOne, int IntegerTwo)
         {
             //Problem statement 
-            /*Write a program to swap two integers*/
-
-            int IntegerOne = 1, IntegerTwo = 2, temp = 0;
+            /* 1. Write a program to swap two integers*/
+            Console.WriteLine($"Traditonal method of Program to swap two integers");
+            int  temp = 0;
 
             Console.WriteLine("Before Swap");
             Console.WriteLine("A = " + IntegerOne);
@@ -25,42 +25,49 @@ namespace Basic_Programming_fundamentals
 
             Console.WriteLine("After Swaped");
             Console.WriteLine("A = " + IntegerOne);
-            Console.WriteLine("B = " + IntegerTwo);
+            Console.Write("B = " + IntegerTwo + "\n");
+
+            ProgramSeparator();
         }
 
-        public static void swap_two_integers_WithOut_Temp()
+        public static void swap_two_integers_WithOut_Temp(int IntegerOne, int IntegerTwo)
         {
             //Problem statement 
-            /*Write a program to swap two integers without using a temporary variable*/
-
-            int IntegerOne = 1000, IntegerTwo = 2000;
-
+            /* 2. Write a program to swap two integers without using a temporary variable*/
+            Console.WriteLine($"Program to swap two integers without using temp varaible");
+            
             Console.WriteLine("Before Swap");
             Console.WriteLine("A = " + IntegerOne);
             Console.WriteLine("B = " + IntegerTwo);
 
+            Console.WriteLine("After Swaped");
             if (IntegerOne > IntegerTwo)
             {
-                IntegerOne = IntegerOne - IntegerTwo;
-                IntegerTwo = IntegerTwo + IntegerOne;
+                //IntegerOne = IntegerOne - IntegerTwo;
+                //IntegerTwo = IntegerTwo + IntegerOne;
+                Console.WriteLine("A = " + (IntegerOne - IntegerTwo));
+                Console.Write("B = " + (IntegerOne + IntegerTwo) + "\n");
             }
             else
             {
-                IntegerTwo = IntegerTwo - IntegerOne;
-                IntegerOne = IntegerOne + IntegerTwo;
+                //IntegerTwo = IntegerTwo - IntegerOne;
+                //IntegerOne = IntegerOne + IntegerTwo;
+
+                Console.WriteLine("A = " + (IntegerTwo - IntegerOne));
+                Console.Write("B = " + (IntegerOne + IntegerTwo) + "\n");
             }
 
-            Console.WriteLine("After Swaped");
-            Console.WriteLine("A = " + IntegerOne);
-            Console.WriteLine("B = " + IntegerTwo);
+            
+           
+            ProgramSeparator();
         }
        
-        public static void swap_two_integers_WithOut_Arimethics()
+        public static void swap_two_integers_WithOut_Arimethics(int IntegerOne, int IntegerTwo)
         {
             //Problem statement 
-            /*Write a program to swap two integers without using a temporary variable and without involving arithmetic operations that may cause overflow. */
-
-            int IntegerOne = 99, IntegerTwo = 98;
+            /* 3. Write a program to swap two integers without using a temporary variable and without involving arithmetic operations that may cause overflow. */
+            Console.WriteLine($"Program to swap two integers without using a temporary variable and without involving arithmetic operations that may cause overflow");
+            //int IntegerOne = 99, IntegerTwo = 98;
 
             Console.WriteLine("Before Swap");
             Console.WriteLine("A = " + IntegerOne);
@@ -72,14 +79,15 @@ namespace Basic_Programming_fundamentals
             string AfterOprA = ApplyANDoPr(binaryNumOfIntegerOne, binaryNumOfIntegerTwo);
             string AfterOprB = ApplyORoPr(binaryNumOfIntegerOne, binaryNumOfIntegerTwo);
 
-            Console.WriteLine(AfterOprB); Console.WriteLine(AfterOprA);
+            //Console.WriteLine(AfterOprB); Console.WriteLine(AfterOprA);
 
             IntegerOne = Convert.ToInt32(AfterOprB, 2);
             IntegerTwo = Convert.ToInt32(AfterOprA, 2);
 
             Console.WriteLine("After Swaped");
             Console.WriteLine("A = " + IntegerOne);
-            Console.WriteLine("B = " + IntegerTwo);
+            Console.Write("B = " + IntegerTwo + "\n");
+            ProgramSeparator();
         } 
 
         public static string ConvertDecimalToBinary(int decimalNum)
@@ -195,38 +203,35 @@ namespace Basic_Programming_fundamentals
         public static void CheckOddEven(int num)
         {
             //Problem statement
-            //Write a program to find whether the given number is Odd or Even 
-
+            //4. Write a program to find whether the given number is Odd or Even 
+            Console.Write($"Program to find whether the given number is Odd or Even :  {num}");
+            
             if (num%2 == 0)
-            {
-                Console.WriteLine("Even number");
-            }
+                Console.Write(" -> Is an Even number\n");
             else if(num%2 == 1)
-            {
-                Console.WriteLine("Odd number");
-            }
+                Console.WriteLine(" -> Is an Odd number\n");
+            
+            ProgramSeparator();
         }
 
         public static void IsLeapYear(int year)
         {
             //Problem statement
-            //Write a program to find whether the given number is Odd or Even
-
+            //5. Write a program to find whether the given year is Leap Year or not 
+            Console.Write($"Program to find whether the given year is Leap Year or not :  {year}");
             if (year % 4 == 0)
-            {
-                Console.WriteLine("Is A Leap Year");
-            }
+                Console.Write(" -> Is A Leap Year \n");
             else 
-            {
-                Console.WriteLine("Is Not A Leap Year");
-            }
+                Console.Write(" -> Not A Leap Year \n");
+            
+            ProgramSeparator();
         }
 
         public static void GreatestSmallestThreeNums(int A, int B, int C, bool IsGreatest)
         {
             //Problem statement
-            //Write a program to find the greatest and smallest of three numbers. 
-
+            //6. Write a program to find the greatest and smallest of three numbers. 
+            
             int temp = 0;
             if (IsGreatest)
             {
@@ -237,7 +242,7 @@ namespace Basic_Programming_fundamentals
                 else
                     temp = A;
 
-                Console.WriteLine($"The Greatest of {A}, {B} and {C} is {temp}");
+                Console.Write($"The Greatest of {A}, {B} and {C} is {temp} \n");
             }
             else
             {
@@ -248,15 +253,16 @@ namespace Basic_Programming_fundamentals
                 else
                     temp = B;
 
-                Console.WriteLine($"The Smallest of {A}, {B} and {C} is {temp}");
+                Console.Write($"The Smallest of {A}, {B} and {C} is {temp} \n");
             }
+            ProgramSeparator();
         }
 
         public static void IsArmstrongNum(int num)
         {
             //Problem statement
-            //Write a program to check whether a given integer is an Armstrong Number or Not.
-
+            //7. Write a program to check whether a given integer is an Armstrong Number or Not.
+            Console.Write($"Program to check whether a given integer is Armstrong Number or Not :  {num}");
             int temp = 0, result = 0;
             int CpyNum = num;
             while (num > 0)
@@ -267,15 +273,19 @@ namespace Basic_Programming_fundamentals
             }
 
             if ((CpyNum - result) == 0)
-                Console.WriteLine($"Given number {CpyNum} is a armstrong number");
+                Console.Write($" -> Is a armstrong number \n ");
             else
-                Console.WriteLine($"Given number {CpyNum} is not a armstrong number");
+                Console.Write($" -> Not a armstrong number \n ");
+
+            ProgramSeparator();
         }
 
         public static void IsNumPalindrome(int num)
         {
             //Problem statement
-            //Write a program to check whether a given integer is Palindrome or Not.
+            //8. Write a program to check whether a given integer is Palindrome or Not.
+
+            Console.Write($"Program to check whether a given integer is Palindrome or Not :  {num}  ");
 
             int res = 0, temp = 0 ,CpyNum = num;
             while (num > 0)
@@ -286,16 +296,20 @@ namespace Basic_Programming_fundamentals
             }
 
             if ((CpyNum - res) == 0)
-                Console.WriteLine($"Given number {res} is a Palindrome Number");
+                Console.Write($" -> Is a Palindrome Number \n");
             else
-                Console.WriteLine($"Given number {res} is not a Palindrome Number");
+                Console.Write($" -> Not a Palindrome Number \n");
+
+            ProgramSeparator();
         }
 
         public static void SumOfDgt(int num)
         {
             //Problem statement
-            //Write a program to find the Sum of the digits of a given number 
-
+            //9. Write a program to find the Sum of the digits of a given number 
+            
+            Console.Write($"program to find the Sum of the digits of a given number {num}  ");
+            
             int temp = 0, res = 0, CpyNum = num;
 
             while (num > 0)
@@ -304,7 +318,42 @@ namespace Basic_Programming_fundamentals
                 res += temp;
                 num /= 10;
             }
-            Console.WriteLine($"The Sum of Digit of {CpyNum} is {res}");
+            Console.Write($" : {res} \n");
+            ProgramSeparator();
+        }
+
+        public static void divisibleBy7Btw1ToN(int N)
+        {
+            //Problem statement
+            //10. Write a program to print the numbers that are divisible by 7 between 1 and N. 
+
+            Console.WriteLine($"Printing number that are divisible by 7 between 1 to {N} : ");
+            
+            for (int i = 1; i < N; i++)
+            {
+                if (i % 7 == 0)
+                    Console.WriteLine(i);
+            }
+            ProgramSeparator();
+        }
+
+        public static void SumOfSquaresBtw1ToN(int N)
+        {
+            //Problem statement
+            //11. Write a program to print the sum of squares of all numbers between 1 and N
+            Console.WriteLine($"Printing Sum of Squares of number between 1 to {N} : ");
+            
+            for (int i = 1;i < N; i++)
+            {
+                Console.WriteLine((i * i));
+            }
+        }
+
+        public static void ProgramSeparator()
+        {
+            for (int i = 1; i < 150; i++)
+                Console.Write("*");
+            Console.WriteLine();
         }
     }
 }
