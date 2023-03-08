@@ -40,34 +40,23 @@ namespace Basic_Programming_fundamentals
             Console.WriteLine("A = " + IntegerOne);
             Console.WriteLine("B = " + IntegerTwo);
 
+            IntegerOne = IntegerOne + IntegerTwo;
+            IntegerTwo = IntegerOne - IntegerTwo;
+            IntegerOne = IntegerOne - IntegerTwo;
+
             Console.WriteLine("After Swaped");
-            if (IntegerOne > IntegerTwo)
-            {
-                //IntegerOne = IntegerOne - IntegerTwo;
-                //IntegerTwo = IntegerTwo + IntegerOne;
-                Console.WriteLine("A = " + (IntegerOne - IntegerTwo));
-                Console.Write("B = " + (IntegerOne + IntegerTwo) + "\n");
-            }
-            else
-            {
-                //IntegerTwo = IntegerTwo - IntegerOne;
-                //IntegerOne = IntegerOne + IntegerTwo;
-
-                Console.WriteLine("A = " + (IntegerTwo - IntegerOne));
-                Console.Write("B = " + (IntegerOne + IntegerTwo) + "\n");
-            }
-
-            
+            Console.WriteLine("A = " + IntegerOne);
+            Console.WriteLine("B = " + IntegerTwo);
            
             ProgramSeparator();
         }
        
-        public static void swap_two_integers_WithOut_Arimethics(int IntegerOne, int IntegerTwo)
+        public static void swap_two_integers_WithOut_Arimethics_Method1(int IntegerOne, int IntegerTwo)
         {
             //Problem statement 
             /* 3. Write a program to swap two integers without using a temporary variable and without involving arithmetic operations that may cause overflow. */
-            Console.WriteLine($"Program to swap two integers without using a temporary variable and without involving arithmetic operations that may cause overflow");
-            //int IntegerOne = 99, IntegerTwo = 98;
+            /*Console.WriteLine($"Program to swap two integers without using a temporary variable and without involving arithmetic operations that may cause overflow");
+            //int IntegerOne = 99, IntegerTwo = 98;*/
 
             Console.WriteLine("Before Swap");
             Console.WriteLine("A = " + IntegerOne);
@@ -88,8 +77,27 @@ namespace Basic_Programming_fundamentals
             Console.WriteLine("A = " + IntegerOne);
             Console.Write("B = " + IntegerTwo + "\n");
             ProgramSeparator();
-        } 
+        }
 
+        public static void Swap_two_integers_WithOut_Arithmetics(int IntegerOne, int IntegerTwo)
+        {
+            //Problem statement 
+            /* 3. Write a program to swap two integers without using a temporary variable and without involving arithmetic operations that may cause overflow. */
+
+            Console.WriteLine("Before Swap");
+            Console.WriteLine("A = " + IntegerOne);
+            Console.WriteLine("B = " + IntegerTwo);
+
+            IntegerOne = IntegerOne ^ IntegerTwo;
+            IntegerTwo = IntegerOne ^ IntegerTwo;
+            IntegerOne = IntegerOne ^ IntegerTwo;
+
+            Console.WriteLine("After Swaped");
+            Console.WriteLine("A = " + IntegerOne);
+            Console.Write("B = " + IntegerTwo + "\n");
+            ProgramSeparator();
+
+        }
         public static string ConvertDecimalToBinary(int decimalNum)
         {
             string result = "";
@@ -347,6 +355,7 @@ namespace Basic_Programming_fundamentals
             {
                 Console.WriteLine((i * i));
             }
+            ProgramSeparator();
         }
 
         public static void ProgramSeparator()
@@ -355,5 +364,7 @@ namespace Basic_Programming_fundamentals
                 Console.Write("*");
             Console.WriteLine();
         }
+
+        //public
     }
 }
