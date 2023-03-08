@@ -14,10 +14,12 @@ namespace Basic_Programming_fundamentals
             Solutions.swap_two_integers(90, 99);
 
             //2. Write a program to swap two integers without using a temporary variable
-            Solutions.swap_two_integers_WithOut_Temp(91, 99);
+            Solutions.swap_two_integers_WithOut_Temp(900, 800);
 
             //3. Write a program to swap two integers without using a temporary variable and without involving arithmetic operations that may cause overflow
-            Solutions.swap_two_integers_WithOut_Arimethics(90, 99);
+            Solutions.Swap_two_integers_WithOut_Arithmetics(900, 800);
+            //Supports only 2 digit numbers alone
+            Solutions.swap_two_integers_WithOut_Arimethics_Method1(900, 800);
 
             //4. Write a program to find whether the given number is Odd or Even
             Solutions.CheckOddEven(144);
